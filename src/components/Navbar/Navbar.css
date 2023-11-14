@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 12vh;
+    width: 100%;
+}
+
+.navButton {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    height: 12vh;
+    width: 100%;
+    background: #001C30;
+}
+
+.displayButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 9vw;
+    background-color: #dafffb;
+    color: white;
+    margin: 0rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.4rem 0 rgba(255, 255, 255, 0.45) inset;
+}
+
+.displayButton {
+    cursor: pointer;
+}
+
+.filterLogo {
+    height: 7vh;
+}
+
+.diplayButtonTitle {
+    color: black;
+    font-size: 1rem;
+    user-select: none;
+    font-weight: bold;
+}
+
+.diplayButtonTitle:hover {
+    cursor: pointer;
+}
+
+.arrowLogo {
+    height: 5vh;
+}
+
+.displayInnerOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 13vw;
+    background-color: #dafffb;
+    box-shadow: 0 0 0.1rem 0 rgba(26, 25, 25, 0.45) inset;
+    border-radius: 0.5rem;
+    gap: 0.5rem 0rem;
+}
+
+.groupingSection, .orderingSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 12vw;
+}
+
+.groupingSectionTitle, .orderingSectionTitle {
+    user-select: none;
+}
+
+.groupingSectionTitle:hover, .orderingSectionTitle:hover {
+    cursor: pointer;
+}
+
+.subOptionsGrouping:hover, .subOptionsOrdering:hover{
+    cursor: pointer;
+}
+
+.subOptionsGrouping, .subOptionsOrdering{
+    height: 3.5vh;
+    width: 5vw;
+    background-color: #001c30;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.45) inset;
+    color: white;
+}
+
+.options {
+    width: 4vw;
+    color: white;
+    user-select: none;
+    font-weight: bold;
+}
+
+.options:hover {
+    width: 4vw;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) and (max-width: 1321px) {
+    .navButton {
+        width: 120%;
+        padding-left: 16vw;
+    }
+
+    .displayButton {
+        width: 12vw;
+    }
+
+    .subOptionsGrouping, .subOptionsOrdering{
+        width: 8vw;
+    }
+
+    .groupingSection, .orderingSection {
+        width: 16vw;
+    }
+
+    .displayInnerOptions {
+        width: 16vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navButton {
+        width: 120%;
+        padding-left: 18vw;
+    }
+
+    .displayButton {
+        width: 16vw;
+    }
+
+    .groupingSection, .orderingSection {
+        width: 12vw;
+    }
+
+
+    .subOptionsGrouping, .subOptionsOrdering{
+        width: 20vw;
+    }
+
+    
+    .displayInnerOptions {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+    .navButton {
+        width: 100%;
+        /* padding-left: 40vw; */
+        padding-top: 5vh;
+        height: 15vh;
+        justify-content: center;
+    }
+
+    .displayButton {
+        width: 30vw;
+    }
+
+    .groupingSection, .orderingSection {
+        width: 12vw;
+        gap: 0rem 0.5rem;
+    }
+
+
+    .subOptionsGrouping, .subOptionsOrdering{
+        width: 20vw;
+    }
+
+    
+    .displayInnerOptions {
+        width: 37vw;
+        
+    }
+}
+
+@media (min-width: 425px) and (max-width: 500px) {
+    .navButton {
+        width: 100%;
+        padding-top: 3vh;
+        height: 16vh;
+        justify-content: center;
+    }
+
+    .displayButton {
+        width: 30vw;
+    }
+
+    .groupingSection, .orderingSection {
+        width: 12vw;
+        gap: 0rem 0.5rem;
+    }
+
+
+    .subOptionsGrouping, .subOptionsOrdering{
+        width: 20vw;
+    }
+
+    
+    .displayInnerOptions {
+        width: 37vw;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .navButton {
+        width: 100%;
+        padding-top: 5vh;
+        height: 15vh;
+        justify-content: center;
+    }
+
+    .displayButton {
+        width: 40vw;
+    }
+
+    .groupingSection, .orderingSection {
+        width: 12vw;
+        gap: 0rem 0.5rem;
+    }
+
+
+    .subOptionsGrouping, .subOptionsOrdering{
+        width: 20vw;
+    }
+
+    
+    .displayInnerOptions {
+        width: 50vw;
+    }
+}
+
