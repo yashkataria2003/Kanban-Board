@@ -27,14 +27,24 @@ const getOrder = () => {
 
 
 const Navbar = () => {
-    const [display, setDisplay] = useState(false);
-
     const dispatch = useDispatch();
 
     const { tickets, users } = useSelector((state) => state.dataSlice);
-
     const [groups, setGroups] = useState(getGroup());
     const [order, setOrder] = useState(getOrder());
+
+    useEffect(() => {
+        if (groups === "user") {
+          dispatch( dataSelect( groups, { tickets, users, }, order));
+        } 
+        
+        else {
+          dispatch(dataSelect(groups, tickets, order));
+        }
+        
+      }, [tickets, dispatch, groups, users, order]);
+
+    const [display, setDisplay] = useState(false);
 
     const handleDisplayClick = () => {
         setDisplay(!display)
@@ -54,24 +64,6 @@ const Navbar = () => {
         }
     }
 
-    useEffect(() => {
-        if (groups === "user") {
-          dispatch(
-            dataSelect(
-              groups,
-              {
-                tickets,
-                users,
-              },
-              order
-            )
-          );
-        } 
-        
-        else {
-          dispatch(dataSelect(groups, tickets, order));
-        }
-      }, [tickets, dispatch, groups, users, order]);
     
     return (
         <div>

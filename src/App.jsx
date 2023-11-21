@@ -7,18 +7,31 @@ import { useEffect } from 'react';
 
 function App() {
   const dispatch = useDispatch();
-  const { tickets } = useSelector((state) => state.dataSlice);
 
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
 
-  return tickets ? (
+  const { tickets, loading, error } = useSelector((state) => state.dataSlice);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    console.error("Something Went Wrong !!!", error);
+    return <div>Error loading data. Please try again later.</div>;
+  }
+  
+
+
+  return (
     <div className='appContainer'>
       <Navbar/>
       <Board/>
     </div>
-  ) : (console.error("Something Went Wrong !!!"));
+);
+
 }
 
 export default App;
